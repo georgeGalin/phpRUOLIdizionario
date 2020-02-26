@@ -19,8 +19,9 @@
           <option value=0>Admin</option>
           <option value=1>Utente</option>
           </select><br><br>
-          <h2>Login</h2>
-        <button type="submit"> Registrati </button>
+          
+        <button type="submit"> Registrati </button><br>
+        <h2>Login</h2>
       </form>
       <form action="login.php" method="POST">       
         Username : <input type="text" name="Nome">

@@ -9,7 +9,7 @@ if (!$password) {
   exit("la password non è corretta, riprova!");
 }
 $connessione = new mysqli("remotemysql.com:3306", "eoC2i6ecss", "e82eOPGCxU", "eoC2i6ecss"); 
-$sql = "SELECT * FROM Users where username=$username and password=$password";
+$sql = "SELECT * FROM Users where username='$username' and password='$password'";
 $result = mysqli_query($connessione, $sql);   
 if ($result || mysqli_num_rows($result) == 0) {
   $row = mysqli_fetch_assoc($result);

@@ -9,9 +9,9 @@
       exit("Inserisci una password!");
     }
     $connessione = new mysqli("remotemysql.com:3306", "eoC2i6ecss", "e82eOPGCxU", "eoC2i6ecss");  
-    $sql = "SELECT username FROM Users WHERE username=$username";
+    $sql = "SELECT username FROM Users WHERE username='$username'";
     $result = mysqli_query($connessione,$sql);
-    if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) == true) {
       exit("Username già registrato");
       
     }
